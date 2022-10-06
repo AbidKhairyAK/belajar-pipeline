@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('build') {
 			steps {
-				sh "echo aku di branch: ${BRANCH_NAME}"
+				sh "echo aku di branch: ${env.BRANCH_NAME}"
 				sh "docker build -t ${DOCKER_NAME} ."
 			}
 		}
